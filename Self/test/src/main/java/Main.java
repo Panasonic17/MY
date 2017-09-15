@@ -1,24 +1,26 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.util.ArrayList;
 
 /**
  * Created by Oleksandr_Shainoga on 9/7/2017.
  */
 public class Main {
+    static void qwe(String s){
+        for (int i = 0; i <10 ; i++) {
+            System.out.println(i+"  "+ s);
+        }
+    }
     public static void main(String[] args) throws Exception {
 
-        String filePath = "D:/queries.csv";
-        BufferedReader fbr = new BufferedReader(new FileReader(filePath));
-        String row;
-        int counter =1;
-        fbr.readLine();
-        while ((row = fbr.readLine()) != null) {
-            String query= row.split(",")[1];
-//            vars.put("query_" + counter, query);
-            System.out.println(query);
-            counter++;
-        }
-//        vars.put("count",counter+"");
-        fbr.close();
+        ArrayList<String> a = new ArrayList<String>();
+        a.add("1");
+        a.add("2");
+        a.add("3");
+        a.add("4");
+        a.add("5");
+        a.add("6");
+        a.add("7");
+        a.stream().peek(a1->qwe(a1)).forEach(System.out::println);
     }
+
+
 }
